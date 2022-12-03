@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import Inputs from './components/Inputs';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
-      <div>App!</div>
+      <div className="App">
+        <div className="inputs">
+          <Inputs />
+        </div>
+      </div>
     );
   }
 }
