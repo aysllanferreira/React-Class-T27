@@ -18,5 +18,6 @@ module.exports = {
   ],
   rules: {
     'react/prefer-stateless-function': [0, { ignorePureComponents: true }],
+    'react/state-in-constructor': [0, 'never'],
   },
 };

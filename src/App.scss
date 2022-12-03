@@ -1,0 +1,11 @@
+.App{
+  .inputs{
+    display: flex;
+    gap: 64px;
+  }
+
+  .Cards{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
