@@ -1,4 +1,41 @@
-.Inputs{
+.Inputs {
   display: flex;
   flex-direction: column;
+  gap: .8rem;
+
+  & > input, & > textarea {
+    background-color: #495057;
+    color: #f1f3f5;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    resize: none;
+
+    &:focus {
+      outline: .1rem solid #3b5bdb;
+    }
+  }
+
+  & > button {
+    background-color: #3b5bdb;
+    color: #f1f3f5;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#3b5bdb, 10%);
+    }
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #3b5bdb;
+      }
+    }
+  }
 }

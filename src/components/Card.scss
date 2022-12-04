@@ -1,4 +1,40 @@
-img{
-  width: 250px;
-  height: 200px;
+.card {
+  height: 40rem;
+  width: 30rem;
+  background-color: #495057;
+  padding: 1.6rem;
+  border-radius: .4rem;
+  color: darken(#f1f3f5, 10%);
+
+  & > h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #f1f3f5;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & > img {
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 1.6rem;
+    border-radius: .4rem;
+  }
+
+  & > p {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+  }
 }

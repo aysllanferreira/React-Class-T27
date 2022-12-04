@@ -1,11 +1,61 @@
-.App{
-  .inputs{
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  & > .inputs {
     display: flex;
-    gap: 64px;
+    align-items: center;
+    gap: 6.4rem;
+
+    width: fit-content;
+    margin: 6.4rem 0;
+    margin-inline: auto;
+
+    background-color: #343a40;
+    padding: 3.2rem;
+    border-radius: .8rem;
+
+    box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, 0.1);
   }
 
-  .Cards{
+  .Cards {
+    width: 120rem;
+    margin-inline: auto;
+    margin-bottom: 6.4rem;
+
     display: flex;
     flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: center;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+
+      & > button {
+        background-color: #3b5bdb;
+        color: #f1f3f5;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: .4rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: darken(#3b5bdb, 10%);
+        }
+
+        &:disabled {
+          opacity: .5;
+          cursor: not-allowed;
+
+          &:hover {
+            background-color: #3b5bdb;
+          }
+        }
+      }
+    }
   }
 }

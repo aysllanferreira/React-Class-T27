@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Inputs from './components/Inputs';
 import Card from './components/Card';
+import Inputs from './components/Inputs';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="inputs">
-          <div>
-            <Inputs />
-          </div>
-          <div>
-            <Card />
-          </div>
+          <Inputs />
+          <Card />
         </div>
-        <div className="Cards">
-          <p> </p>
-        </div>
+        <div className="Cards" />
       </div>
     );
   }
