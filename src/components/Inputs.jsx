@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './Inputs.scss';
 
 class Inputs extends Component {
   render() {
+    const {
+      nome, alcunha, imagem, descricao, handleChange, handleClick,
+    } = this.props;
     return (
       <div className="Inputs">
         <input
           type="text"
           placeholder="Nome"
-          onChange="nada"
-          value="nome"
+          onChange={handleChange}
+          value={nome}
           name="nome"
         />
         <input
           type="text"
           placeholder="Alcunha"
-          onChange="nada"
-          value="alcunha"
+          onChange={handleChange}
+          value={alcunha}
           name="alcunha"
         />
         <input
           type="text"
           placeholder="Imagem"
-          onChange="nada"
-          value="imagem"
+          onChange={handleChange}
+          value={imagem}
           name="imagem"
         />
         <textarea
@@ -33,12 +36,12 @@ class Inputs extends Component {
           cols="30"
           rows="10"
           placeholder="descricao"
-          onChange="nada"
-          value="descricao"
+          onChange={handleChange}
+          value={descricao}
         />
         <button
           type="button"
-          onClick="nada"
+          onClick={handleClick}
         >
           Criar Card
 
@@ -47,5 +50,14 @@ class Inputs extends Component {
     );
   }
 }
+
+Inputs.propTypes = {
+  nome: PropTypes.string.isRequired,
+  alcunha: PropTypes.string.isRequired,
+  imagem: PropTypes.string.isRequired,
+  descricao: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default Inputs;
